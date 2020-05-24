@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: "bredakbc"
+spec:
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: "bredakbc"
+    spec:
+      containers:
+        - name: "bredakbc"
+          image: "breda01.azurecr.io/bredakbc"
+          ports:
+          - containerPort: 8080
