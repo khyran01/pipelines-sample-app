@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: khyranpipelinessampleapp 
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: khyranpipelinessampleapp 
+    spec:
+      containers:
+        - name: khyranpipelinessampleapp 
+          image: bredacontainerregistry.azurecr.io/khyranpipelinessampleapp
+          ports:
+          - containerPort: 8080
